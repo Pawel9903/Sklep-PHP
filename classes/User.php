@@ -10,6 +10,7 @@ class User
 {
     private $pdo;
     private $user;
+    private $last_id;
 
     public function __construct()
     {
@@ -23,12 +24,39 @@ class User
 
     public function addUser()
     {
-        $query = $this->pdo->prepare("INSERT INTO users (user_name, surname, email, phone, join_date) VALUES (:user_name, :surname, :email, :phone, :join_date)");
+        $query = $this->pdo->prepare("INSERT INTO users (user_name, surname, email, password, phone, join_date) VALUES (:user_name, :surname, :email, :password, :phone, :join_date)");
         $query->bindParam(':user_name',$_POST['name']);
         $query->bindParam(':surname',$_POST['surname']);
         $query->bindParam(':email',$_POST['email']);
+        $query->bindParam(':password',password_hash($_POST['email'], PASSWORD_DEFAULT));
         $query->bindParam(':phone',$_POST['phone']);
         $query->bindParam(':join_date',$_POST['date']);
         $query->execute();
+
+        $this->last_id = $this->pdo->lastInsertId();
     }
+
+    public function ifAccountExists()
+    {
+        $query = $this->pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $query->bindParam(':email',$_POST['email']);
+        $query->execute();
+        if($query->fetch())
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLastId()
+    {
+        return $this->last_id;
+    }
+
 }
+

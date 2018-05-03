@@ -11,7 +11,6 @@ class FormRegistration extends Form
     private $requireFields = array('name','surname','email','phone','date');
 
     public function __construct(){
-        $this->getDataPost();
         $this->getError($this->getRequireFields());
         $this->ifEmptyFields($this->getRequireFields());
         $this->validateEmail();

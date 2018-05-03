@@ -25,6 +25,12 @@ include('templates/head.php');
         </fieldset>
 
         <fieldset>
+            <label for="password">Password*:</label>
+            <input name="password" id="password" type="password" value="">
+            <div class="alert-danger"></div>
+        </fieldset>
+
+        <fieldset>
             <label for="phone">Telefon*:</label>
             <input name="phone" id="phone" type="text" value="">
             <div class="alert-danger"></div>

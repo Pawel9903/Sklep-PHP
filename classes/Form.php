@@ -9,13 +9,8 @@
 
 abstract class Form
 {
-    protected $fields = array();
     protected $error = array();
 
-    public function getDataPost()
-    {
-        $this->fields = $_POST;
-    }
 
     public function ifEmptyFields($requireFields)
     {
@@ -51,13 +46,6 @@ abstract class Form
         }
     }
 
-    /**
-     * @return array
-     */
-    public function getFields(): array
-    {
-        return $this->fields;
-    }
 
     /**
      * @return array

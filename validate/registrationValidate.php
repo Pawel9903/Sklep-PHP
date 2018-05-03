@@ -1,18 +1,19 @@
 <?php
+session_start();
 
 spl_autoload_register(function($class)
 {
-    include '../../classes/'.$class.'.php';
+    include '../classes/'.$class.'.php';
 });
-
-require ('../classes/Form.php');
-require ('../classes/FormRegistration.php');
-require ('../classes/Db.php');
-require ('../classes/Config.php');
-require ('../classes/User.php');
-
     $form = new FormRegistration();
-    if(empty($form->getError())){
-        $newUser = new User();
-        var_dump($newUser->addUser());
+    $newUser = new User();
+    $exists = $newUser->ifAccountExists();
+    if($exists == true)
+    {
+        echo "<li>Podany email już istnieje</li>";
+    }
+    if(empty($form->getError()) && $exists == false){
+        $newUser->addUser();
+        $_SESSION['id'] = $newUser->getLastId();
+        echo 'success';
     };

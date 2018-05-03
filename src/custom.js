@@ -3,7 +3,8 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
-    document.getElementById("submitRegister").onclick = function () {
+    document.getElementById("submitRegister").onclick = function (e) {
+        e.preventDefault();
         checkForm();
     }
 }
@@ -29,8 +30,20 @@ function checkForm() {
 function registration() {
     if(request.readyState == 4 && request.status == 200)
     {
-        document.getElementById("response").innerHTML = request.responseText;
-    }else{
+        if(request.responseText.includes("success"))
+        {
+            window.location.href = "announcement.php";
+            document.getElementById("name").value = "";
+            document.getElementById("surname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("date").value = "";
+        }else
+        {
+            document.getElementById("response").innerHTML = request.responseText;
+        }
+
+        }else{
 
     }
 }
