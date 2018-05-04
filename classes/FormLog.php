@@ -6,9 +6,9 @@
  * Time: 12:26
  */
 
-class FormRegistration extends Form
+class FormLog extends Form
 {
-    private $requireFields = array('name','surname','email', 'password', 'phone','date');
+    private $requireFields = array('email','password');
 
     public function __construct(){
         $this->getError($this->getRequireFields());

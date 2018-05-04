@@ -7,7 +7,7 @@ spl_autoload_register(function($class)
 });
     $form = new FormRegistration();
     $newUser = new User();
-    $exists = $newUser->ifAccountExists();
+    $exists = $newUser->ifEmailExists();
     if($exists == true)
     {
         echo "<li>Podany email już istnieje</li>";

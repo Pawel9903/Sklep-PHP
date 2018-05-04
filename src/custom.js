@@ -5,27 +5,50 @@ $(document).ready(function () {
 window.onload = function () {
     document.getElementById("submitRegister").onclick = function (e) {
         e.preventDefault();
-        checkForm();
+        checkRegistrationForm();
+    }
+
+    document.getElementById("submitLog").onclick = function (e) {
+        e.preventDefault();
+        checkLogForm();
     }
 }
 
-function checkForm() {
+function checkRegistrationForm() {
     request = "";
     request = new XMLHttpRequest();
 
     var name = document.getElementById("name").value;
     var surname = document.getElementById("surname").value;
     var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
     var phone = document.getElementById("phone").value;
     var date = document.getElementById("date").value;
 
-    var content = "name=" + name + "&surname=" + surname + "&email=" + email + "&phone=" + phone + "&date=" + date;
+    var content = "name=" + name + "&surname=" + surname + "&email=" + email + "&password=" +password + "&phone=" + phone + "&date=" + date;
     var url = "../validate/registrationValidate.php";
     request.onreadystatechange = registration;
     request.open("POST", url, true);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send(content);
 }
+
+function checkLogForm() {
+    request = "";
+    request = new XMLHttpRequest();
+
+
+    var email = document.getElementById("emailLog").value;
+    var password = document.getElementById("passwordLog").value;
+
+    var content = "email=" + email + "&password=" + password;
+    var url = "../validate/logValidate.php";
+    request.onreadystatechange = log;
+    request.open("POST", url, true);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send(content);
+}
+
 
 function registration() {
     if(request.readyState == 4 && request.status == 200)
@@ -40,10 +63,24 @@ function registration() {
             document.getElementById("date").value = "";
         }else
         {
-            document.getElementById("response").innerHTML = request.responseText;
+            document.getElementById('responseRegistration').innerHTML = request.responseText;
         }
 
-        }else{
+        }
+}
+
+function log() {
+    if(request.readyState == 4 && request.status == 200)
+    {
+        if(request.responseText.includes("success"))
+        {
+            window.location.href = "announcement.php";
+            document.getElementById("emailLog").value = "";
+            document.getElementById("passwordLog").value = "";
+        }else
+        {
+            document.getElementById('responseLog').innerHTML = request.responseText;
+        }
 
     }
 }

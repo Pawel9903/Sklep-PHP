@@ -17,6 +17,12 @@ class User
         $this->pdo = Db::getInstance()->getPdo();
     }
 
+    public function getUserByEmail($email)
+    {
+            $this->user = $this->pdo->query("SELECT * FROM users WHERE email = '$email'")->fetch();
+
+    }
+
     public function getAllUsers()
     {
        return $this->pdo->query("SELECT * FROM users")->fetchAll();
@@ -28,7 +34,7 @@ class User
         $query->bindParam(':user_name',$_POST['name']);
         $query->bindParam(':surname',$_POST['surname']);
         $query->bindParam(':email',$_POST['email']);
-        $query->bindParam(':password',password_hash($_POST['email'], PASSWORD_DEFAULT));
+        $query->bindParam(':password',password_hash($_POST['password'], PASSWORD_BCRYPT));
         $query->bindParam(':phone',$_POST['phone']);
         $query->bindParam(':join_date',$_POST['date']);
         $query->execute();
@@ -36,10 +42,25 @@ class User
         $this->last_id = $this->pdo->lastInsertId();
     }
 
-    public function ifAccountExists()
+    public function ifEmailExists()
     {
         $query = $this->pdo->prepare("SELECT * FROM users WHERE email = :email");
         $query->bindParam(':email',$_POST['email']);
+        $query->execute();
+        if($query->fetch())
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+
+    public function ifAccountExists($password)
+    {
+        $query = $this->pdo->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
+        $query->bindParam(':email',$_POST['email']);
+        $query->bindParam(':password',$password);
         $query->execute();
         if($query->fetch())
         {
@@ -58,5 +79,12 @@ class User
         return $this->last_id;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
 
