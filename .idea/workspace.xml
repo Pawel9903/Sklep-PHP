@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab3ebc4e-fd1d-4312-8416-0b7ff7087a26" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/validate/addAnnouncementValidate.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/classes/Announcement.php" afterPath="$PROJECT_DIR$/classes/Announcement.php" />
+      <change beforePath="$PROJECT_DIR$/src/custom.js" afterPath="$PROJECT_DIR$/src/custom.js" />
       <change beforePath="$PROJECT_DIR$/views/announcement.php" afterPath="$PROJECT_DIR$/views/announcement.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,26 +34,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Announcement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Announcement.php">
+      <file leaf-file-name="addAnnouncementValidate.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/validate/addAnnouncementValidate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="252">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="announcement.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/announcement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="82" column="39" lean-forward="true" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
               <folding>
-                <marker date="1525433641194" expanded="true" signature="352:407" ph="SELECT * FRO... " />
-                <marker date="1525433641194" expanded="true" signature="527:659" ph="SELECT a.nam... announcement" />
+                <marker date="1525454906820" expanded="true" signature="408:1492" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="announcement.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/announcement.php">
+      <file leaf-file-name="Announcement.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Announcement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+            <state relative-caret-position="56">
+              <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
               <folding>
-                <marker date="1525434591293" expanded="true" signature="408:1478" ph="..." />
+                <marker date="1525456322331" expanded="true" signature="352:407" ph="SELECT * FRO... " />
+                <marker date="1525456322331" expanded="true" signature="527:673" ph="SELECT a.nam... announcement" />
+                <marker date="1525456322331" expanded="true" signature="806:965" ph="INSERT INTO announcement... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <marker date="1525422488805" expanded="true" signature="353:395" ph="SELECT * FRO... users" />
+                <marker date="1525422488805" expanded="true" signature="489:508" ph="SELECT * FRO... users" />
+                <marker date="1525422488805" expanded="true" signature="605:747" ph="INSERT INTO users... " />
+                <marker date="1525422488805" expanded="true" signature="1285:1325" ph="SELECT * FRO... users" />
+                <marker date="1525422488805" expanded="true" signature="1630:1695" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -91,8 +121,9 @@
         <option value="$PROJECT_DIR$/classes/User.php" />
         <option value="$PROJECT_DIR$/validate/logValidate.php" />
         <option value="$PROJECT_DIR$/src/custom.js" />
-        <option value="$PROJECT_DIR$/classes/Announcement.php" />
         <option value="$PROJECT_DIR$/views/announcement.php" />
+        <option value="$PROJECT_DIR$/classes/Announcement.php" />
+        <option value="$PROJECT_DIR$/validate/addAnnouncementValidate.php" />
       </list>
     </option>
   </component>
@@ -250,12 +281,12 @@
       <workItem from="1525186272396" duration="14594000" />
       <workItem from="1525285953818" duration="6754000" />
       <workItem from="1525329486491" duration="13333000" />
-      <workItem from="1525419153292" duration="9541000" />
+      <workItem from="1525419153292" duration="19882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63906000" />
+    <option name="totallyTimeSpent" value="74247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -566,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/templates/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/templates/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -618,36 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="78" column="48" lean-forward="false" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1525422488805" expanded="true" signature="353:395" ph="SELECT * FRO... users" />
-            <marker date="1525422488805" expanded="true" signature="489:508" ph="SELECT * FRO... users" />
-            <marker date="1525422488805" expanded="true" signature="605:747" ph="INSERT INTO users... " />
-            <marker date="1525422488805" expanded="true" signature="1285:1325" ph="SELECT * FRO... users" />
-            <marker date="1525422488805" expanded="true" signature="1630:1695" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validate/logValidate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -672,24 +666,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Announcement.php">
+    <entry file="file://$PROJECT_DIR$/views/templates/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="42">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validate/logValidate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
-            <marker date="1525433641194" expanded="true" signature="352:407" ph="SELECT * FRO... " />
-            <marker date="1525433641194" expanded="true" signature="527:659" ph="SELECT a.nam... announcement" />
+            <marker date="1525422488805" expanded="true" signature="353:395" ph="SELECT * FRO... users" />
+            <marker date="1525422488805" expanded="true" signature="489:508" ph="SELECT * FRO... users" />
+            <marker date="1525422488805" expanded="true" signature="605:747" ph="INSERT INTO users... " />
+            <marker date="1525422488805" expanded="true" signature="1285:1325" ph="SELECT * FRO... users" />
+            <marker date="1525422488805" expanded="true" signature="1630:1695" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/announcement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        <state relative-caret-position="518">
+          <caret line="82" column="39" lean-forward="true" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
           <folding>
-            <marker date="1525434591293" expanded="true" signature="408:1478" ph="..." />
+            <marker date="1525454906820" expanded="true" signature="408:1492" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Announcement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding>
+            <marker date="1525456322331" expanded="true" signature="352:407" ph="SELECT * FRO... " />
+            <marker date="1525456322331" expanded="true" signature="527:673" ph="SELECT a.nam... announcement" />
+            <marker date="1525456322331" expanded="true" signature="806:965" ph="INSERT INTO announcement... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validate/addAnnouncementValidate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,18 +1,31 @@
 $(document).ready(function () {
     $('#date').datepicker();
+    document.getElementById("formA").onsubmit = function () {
+        var name = document.getElementById('nameA').value;
+        var price = document.getElementById('priceA').value;
+        var description = document.getElementById('descriptionA').value;
+        var end = document.getElementById('endA').value;
+        var type = document.getElementById('typeA').value;
+
+        if(name == '' || price == '' || description == '' || end == '' || type == '')
+        {
+
+            document.getElementById('formAlertA').style.display = "block";
+            return false;
+        }    }
 });
 
 window.onload = function () {
     document.getElementById("submitRegister").onclick = function (e) {
         e.preventDefault();
         checkRegistrationForm();
-    }
+    };
 
     document.getElementById("submitLog").onclick = function (e) {
         e.preventDefault();
         checkLogForm();
-    }
-}
+    };
+};
 
 function checkRegistrationForm() {
     request = "";
@@ -82,5 +95,22 @@ function log() {
             document.getElementById('responseLog').innerHTML = request.responseText;
         }
 
+    }
+}
+
+function validateAnnouncementForm() {
+
+    var name = document.getElementById('nameA').value;
+    var price = document.getElementById('priceA').value;
+    var description = document.getElementById('descriptionA').value;
+    var end = document.getElementById('endA').value;
+    var type = document.getElementById('typeA').value;
+
+    if(name == '' || price == '' || description == '' || end == '' || type == '')
+    {
+
+        document.getElementById('formAlert').style.display = "block";
+
+        return false;
     }
 }
